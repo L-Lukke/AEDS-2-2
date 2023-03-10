@@ -19,15 +19,15 @@ public class App {
                 Personagem personagem = new Personagem();
                 RandomAccessFile raf = new RandomAccessFile(MyIO.readLine(), "r");
                 String line = raf.readLine();
-                personagem.setName(extractAtribute(NOME, line, pointer));
-                tratarHeight(extractAtribute(HEIGHT, line, pointer), personagem);
-                tratarMass(extractAtribute(MASS, line, pointer), personagem);
-                personagem.setHairColour(extractAtribute(HAIR_COLOUR, line, pointer));
-                personagem.setSkinColour(extractAtribute(SKIN_COLOUR, line, pointer));
-                personagem.setEyeColour(extractAtribute(EYE_COLOUR, line, pointer));
-                personagem.setBirthYear(extractAtribute(BIRTH_YEAR, line, pointer));
-                personagem.setGender(extractAtribute(GENDER, line, pointer));
-                personagem.setHomeworld(extractAtribute(HOMEWORLD, line, pointer));
+                personagem.setName(extractAtribute(NOME, line));
+                tratarHeight(extractAtribute(HEIGHT, line), personagem);
+                tratarMass(extractAtribute(MASS, line), personagem);
+                personagem.setHairColour(extractAtribute(HAIR_COLOUR, line));
+                personagem.setSkinColour(extractAtribute(SKIN_COLOUR, line));
+                personagem.setEyeColour(extractAtribute(EYE_COLOUR, line));
+                personagem.setBirthYear(extractAtribute(BIRTH_YEAR, line));
+                personagem.setGender(extractAtribute(GENDER, line));
+                personagem.setHomeworld(extractAtribute(HOMEWORLD, line));
                 pointer = 0;
                 personagem.imprimir();
             }
@@ -50,7 +50,7 @@ public class App {
             personagem.setWeight(Double.parseDouble(nova));
         }
     }
-    public static String extractAtribute(String atribute, String line, int pos) {
+    public static String extractAtribute(String atribute, String line) {
         // Sempre passar o indice que vamos começar a percorrer a linhha;
         char separator = '\'';
         String res = "";
