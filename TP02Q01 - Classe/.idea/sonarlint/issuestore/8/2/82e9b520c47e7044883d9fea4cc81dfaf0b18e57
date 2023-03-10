@@ -1,0 +1,28 @@
+
+\	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Š†µ”
+K
+java:S1066‘"/Merge this if statement with the enclosing one.(ßÒÊíÿÿÿÿÿ
+3
+java:S1643’"Use a StringBuilder instead.(¥å¹÷
+0
+java:S1220""Move this file to a named package.
+^
+java:S3973¤"GUse indentation to denote the code conditionally executed by this "if".(İ¦Àé
+e
+java:S3973¦"IUse indentation to denote the code conditionally executed by this "else".(„¶áìøÿÿÿÿ
+c
+java:S3973¨"GUse indentation to denote the code conditionally executed by this "if".(‹·È¿üÿÿÿÿ
+e
+java:S3973ª"IUse indentation to denote the code conditionally executed by this "else".(„¶áìøÿÿÿÿ
+£
+java:S2681¨"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(‹·È¿üÿÿÿÿ
+
+java:S2681¬"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(®»ÌŒ
+[	java:S107"AConstructor has 9 parameters, which is greater than 7 authorized.(ÎÇÖúÿÿÿÿ
+i
+java:S2975k"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(ªáÒ
+^
+java:S1182k"HUse super.clone() to create and seed the cloned instance to be returned.(ªáÒ
+S	java:S106}"9Replace this use of System.out or System.err by a logger.(—€ø¿ûÿÿÿÿ
+T	java:S106Œ"9Replace this use of System.out or System.err by a logger.(ñ—¸½úÿÿÿÿ
+O	java:S106µ"9Replace this use of System.out or System.err by a logger.(Àûå 

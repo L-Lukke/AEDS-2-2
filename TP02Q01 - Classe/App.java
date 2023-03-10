@@ -13,6 +13,7 @@ public class App {
     static final String HOMEWORLD = "'homeworld': '";
 
     public static void main(String[] args) {
+        
         String input = "";
         try {
             while (!input.equals("FIM")) {
@@ -51,22 +52,20 @@ public class App {
         }
     }
     public static String extractAtribute(String atribute, String line) {
-        // Sempre passar o indice que vamos começar a percorrer a linhha;
         char separator = '\'';
         String res = "";
         int aux = 0;
         StringBuilder sb = new StringBuilder();
-        for (int i = aux; i < line.length(); i++) {
+        for (int i = pointer; i < line.length(); i++) {
             sb.append(line.charAt(i));
             if (sb.toString().contains(atribute)) {
                 int inicioNomeIndex = sb.toString().lastIndexOf(atribute) + atribute.length();
-                pointer = inicioNomeIndex;
+                aux = pointer;
+                pointer += inicioNomeIndex;//
                 while (line.charAt(pointer) != separator) {
-                    aux++;
                     pointer++;// Indice final de onde acaba o atributo
                 }
-                res = line.substring(inicioNomeIndex, pointer);
-                sb = null;
+                res = line.substring(inicioNomeIndex+aux, pointer);
                 return res;
             }
         }

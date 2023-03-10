@@ -1,0 +1,10 @@
+
+0
+java:S1220""Move this file to a named package.
+i
+java:S2095"NUse try-with-resources or close this "RandomAccessFile" in a "finally" clause.(°ÙÄóùÿÿÿÿ
+>	java:S108#")Either remove or fill this block of code.(”ı¾
+V	java:S1257"<This block of commented-out lines of code should be removed.(şÒ¤úÿÿÿÿ
+>
+java:S1481:"(Remove this unused "aux" local variable.(­şĞ¯
+S	java:S106E"9Replace this use of System.out or System.err by a logger.(§ûœŞüÿÿÿÿ
