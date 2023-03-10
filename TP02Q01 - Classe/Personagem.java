@@ -44,6 +44,7 @@ class Personagem {
     }
 
     public String getHairColour() {
+
         return hairColour;
     }
 

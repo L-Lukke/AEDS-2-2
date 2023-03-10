@@ -16,16 +16,12 @@ public class App {
         String input = "";
         try {
             while (!input.equals("FIM")) {
-                System.out.println(input);
-                String heightM;
-                String massM;
                 Personagem personagem = new Personagem();
                 RandomAccessFile raf = new RandomAccessFile(MyIO.readLine(), "r");
                 String line = raf.readLine();
                 personagem.setName(extractAtribute(NOME, line, pointer));
-                //Tratar "Unknow"
-                personagem.setHeight(Integer.parseInt(extractAtribute(HEIGHT, line, pointer)));
-                personagem.setWeight(Double.parseDouble(extractAtribute(MASS, line, pointer)));
+                tratarHeight(extractAtribute(HEIGHT, line, pointer), personagem);
+                tratarMass(extractAtribute(MASS, line, pointer), personagem);
                 personagem.setHairColour(extractAtribute(HAIR_COLOUR, line, pointer));
                 personagem.setSkinColour(extractAtribute(SKIN_COLOUR, line, pointer));
                 personagem.setEyeColour(extractAtribute(EYE_COLOUR, line, pointer));
@@ -36,10 +32,24 @@ public class App {
                 personagem.imprimir();
             }
         } catch (Exception e) {
-            System.out.println(e);
+            
         }
     }
-
+    public static void tratarHeight(String str, Personagem personagem){
+        if (str.equals("unknown")) {
+            personagem.setHeight(0);
+        } else {
+            personagem.setHeight(Integer.parseInt(str));
+        }
+    }
+    public static void tratarMass(String str, Personagem personagem){
+        String nova = str.replace(',', '.');
+        if (nova.equals("unknown")) {
+            personagem.setWeight(0);
+        } else {
+            personagem.setWeight(Double.parseDouble(nova));
+        }
+    }
     public static String extractAtribute(String atribute, String line, int pos) {
         // Sempre passar o indice que vamos começar a percorrer a linhha;
         char separator = '\'';

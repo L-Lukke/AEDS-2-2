@@ -80,4 +80,3 @@
  ## Yarael Poof ## 264 ## 0 ## none ## white ## yellow ## unknown ## male ## Quermia ## 
  ## Yoda ## 66 ## 17 ## white ## green ## brown ## 896BBY ## male ## unknown ## 
  ## Zam Wesell ## 168 ## 55 ## blonde ## fair, green, yellow ## yellow ## unknown ## female ## Zolan ## 
-java.io.FileNotFoundException: FIM (No such file or directory)
