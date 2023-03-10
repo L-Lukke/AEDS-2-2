@@ -5,7 +5,7 @@ public class TP02Q01{
 		else 
 			return true;
 	}
-    public static void main(String [] args) throws Exception{
+    public static void main(String [] args) throws Exception {
         Personagem token = new Personagem();
         String path;
         path = MyIO.readLine();

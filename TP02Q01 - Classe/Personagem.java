@@ -124,9 +124,19 @@ class Personagem {
         System.out.println(" ## " + name + " ## " + height + " ## " + numberFormat.format(weight) + " ## " + hairColour + " ## "
                 + skinColour + " ## " + eyeColour + " ## " + birthYear + " ## " + gender + " ## " + homeworld + " ## ");
     }
+    
+
+    @Override
+    public String toString() {
+        return "Personagem [name=" + name + ", height=" + height + ", weight=" + weight
+                + ", hairColour=" + hairColour + ", skinColour=" + skinColour + ", eyeColour="
+                + eyeColour + ", birthYear=" + birthYear + ", gender=" + gender + ", homeworld="
+                + homeworld + "]";
+    }
 
     public String addToAuxString(String line, String att) {
         String aux = "";
+        System.out.println(line);
 
         if(line.lastIndexOf(att) > 0) {
             for (int i = line.lastIndexOf(att); line.charAt(i) != ','; i++) {
