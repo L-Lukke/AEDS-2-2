@@ -24,7 +24,8 @@ public class Mock {
         personagem.setBirthYear(extractAtribute(BIRTH_YEAR, line, pointer));
         personagem.setGender(extractAtribute(GENDER, line, pointer));
         personagem.setHomeworld(extractAtribute(HOMEWORLD, line, pointer));
-        System.out.println(personagem.toString());
+        pointer = 0;
+        personagem.imprimir();
     }
     public static String extractAtribute(String atribute, String line, int pos) {
         // Sempre passar o indice que vamos começar a percorrer a linhha;
